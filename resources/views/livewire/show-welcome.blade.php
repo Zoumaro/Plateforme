@@ -1,0 +1,6 @@
+
+
+<div>@include('navbar')</div>
+
+
+
