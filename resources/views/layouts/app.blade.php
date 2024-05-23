@@ -7,8 +7,6 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
-   
-
     @livewireStyles
 
 </head>
