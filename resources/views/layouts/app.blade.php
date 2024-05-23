@@ -7,11 +7,13 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     
+   
+
     @livewireStyles
 
 </head>
 <body>
-
+    @yield('content')
            <main>
                 {{ $slot }}
             </main>

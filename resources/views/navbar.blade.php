@@ -34,16 +34,19 @@
             </a>
           </li>
           <li
-            class='max-lg:border-b max-lg:py-3 relative lg:after:absolute lg:after:bg-white lg:after:w-full lg:after:h-[2px] lg:after:block lg:after:-bottom-4 lg:after:transition-all lg:after:duration-300'>
+            class='max-lg:border-b  max-lg:py-3 relative lg:after:absolute lg:after:bg-white lg:after:w-full lg:hover:after:h-[2px] lg:after:block lg:after:-bottom-4 lg:after:transition-all lg:after:duration-300'>
             <a href='/' class='text-white block text-[15px] font-medium'>Accueil</a>
           </li>
+          
           <li
             class='max-lg:border-b max-lg:py-3 relative lg:hover:after:absolute lg:after:bg-white lg:after:w-0 lg:hover:after:w-full lg:hover:after:h-[2px] lg:after:block lg:after:-bottom-4 lg:after:transition-all lg:after:duration-300'>
-            <a href='' class='text-white block text-[15px] font-medium'>Contact</a>
+            <a href='/produit' class='text-white block text-[15px] font-medium active'>Produit</a>
           </li>
+
+
           <li
             class='max-lg:border-b max-lg:py-3 relative lg:hover:after:absolute lg:after:bg-white lg:after:w-0 lg:hover:after:w-full lg:hover:after:h-[2px] lg:after:block lg:after:-bottom-4 lg:after:transition-all lg:after:duration-300'>
-            <a href='' class='text-white block text-[15px] font-medium'>Produit</a>
+            <a href='/contact' class='text-white block text-[15px] font-medium'>Contact</a>
           </li>
           
         </ul>
@@ -88,3 +91,14 @@
       </div>
     </div>
   </header>
+
+
+
+
+
+
+
+
+
+
+ 

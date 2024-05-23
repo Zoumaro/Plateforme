@@ -2,14 +2,12 @@
 
 namespace App\Http\Livewire;
 
-
 use Livewire\Component;
 
-class Login extends Component
+class Produit extends Component
 {
-
     public function render()
     {
-        return view('livewire.login');
+        return view('livewire.produit');
     }
 }

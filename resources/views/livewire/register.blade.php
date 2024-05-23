@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
 
-    <style>
-        * {
-            font-family: "Nanum Gothic", sans-serif;
-        }
-        body {
-            background-image: url(image/d9.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            
-        }
-    </style>
-</head>
 <body class="text-white">
 <div class="max-w-4xl mx-auto font-[sans-serif] text-[#333] p-6">
       <div class="text-center mb-16">
@@ -78,5 +59,4 @@
 
 
 
-
-
+  
