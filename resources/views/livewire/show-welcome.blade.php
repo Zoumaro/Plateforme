@@ -73,42 +73,42 @@
     </div>
 </div>
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
-    <!-- Première carte -->
+  
     <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-between transition duration-100 transform hover:scale-105">
-        <div class="flex justify-center items-center h-50"> <!-- Conteneur pour centrer l'image -->
-            <img src="/image/image4.jpg" alt="Nom de l'image" class="w-full h-41 object-cover "> <!-- Ajustement de la taille de l'image -->
+        <div class="flex justify-center items-center h-50"> 
+            <img src="/image/image4.jpg" alt="Nom de l'image" class="w-full h-41 object-cover "> 
         </div>
-        <div class="p-6 flex flex-col justify-center items-center"> <!-- Conteneur pour centrer le texte -->
+        <div class="p-6 flex flex-col justify-center items-center">
             <h3 class="text-lg font-semibold text-gray-800 mb-2">Nom du produit 1</h3>
             <p class="text-gray-600">Prix : $20</p>
         </div>
     </div>
-    <!-- Deuxième carte -->
+  
     <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-between transition duration-100 transform hover:scale-105">
-        <div class="flex justify-center items-center h-50"> <!-- Conteneur pour centrer l'image -->
-            <img src="/image/image5.jpg" alt="Nom de l'image"  class="w-full h-50 object-cover"> <!-- Ajustement de la taille de l'image -->
+        <div class="flex justify-center items-center h-50"> 
+            <img src="/image/image5.jpg" alt="Nom de l'image"  class="w-full h-50 object-cover"> 
         </div>
-        <div class="p-6 flex flex-col justify-center items-center"> <!-- Conteneur pour centrer le texte -->
+        <div class="p-6 flex flex-col justify-center items-center"> 
             <h3 class="text-lg font-semibold text-gray-800 mb-2">Nom du produit 2</h3>
             <p class="text-gray-600">Prix : $30</p>
         </div>
     </div>
-    <!-- Troisième carte -->
+   
     <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-between transition duration-100 transform hover:scale-105">
-        <div class="flex justify-center items-center h-50"> <!-- Conteneur pour centrer l'image -->
-            <img src="/image/image6.jpg" alt="Nom de l'image"  class="w-full h-41 object-cover"> <!-- Ajustement de la taille de l'image -->
+        <div class="flex justify-center items-center h-50"> 
+            <img src="/image/image6.jpg" alt="Nom de l'image"  class="w-full h-41 object-cover"> 
         </div>
-        <div class="p-6 flex flex-col justify-center items-center"> <!-- Conteneur pour centrer le texte -->
+        <div class="p-6 flex flex-col justify-center items-center"> 
             <h3 class="text-lg font-semibold text-gray-800 mb-2">Nom du produit 3</h3>
             <p class="text-gray-600">Prix : $25</p>
         </div>
     </div>
-    <!-- Quatrième carte -->
+ 
     <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-between transition duration-100 transform hover:scale-105">
-        <div class="flex justify-center items-center h-50"> <!-- Conteneur pour centrer l'image -->
-            <img src="/image/image8.jpg" alt="Nom de l'image" class="w-full h-41 object-cover"> <!-- Ajustement de la taille de l'image -->
+        <div class="flex justify-center items-center h-50"> 
+            <img src="/image/image8.jpg" alt="Nom de l'image" class="w-full h-41 object-cover"> 
         </div>
-        <div class="p-6 flex flex-col justify-center items-center"> <!-- Conteneur pour centrer le texte -->
+        <div class="p-6 flex flex-col justify-center items-center"> 
             <h3 class="text-lg font-semibold text-gray-800 mb-2">Nom du produit 4</h3>
             <p class="text-gray-600">Prix : $35</p>
         </div>
@@ -119,33 +119,24 @@
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 <div class="slideshow-container">
-  <!-- bg-img -->
+
   <div class="bg-img">
     <div class="description"></div>
   </div>
 
-  <div class="card-container">
-  <!-- Première carte -->
-  <div class="card">
-    <img src="/image/image4.jpg" alt="Produit 1">
-    <div class="card-content">
-      <h2 class="card-title">PATATE</h2>
-      <p class="card-description">5000FCFA</p>
-    </div>
-  </div>
-
+  
 <script>
     $(document).ready(function(){
-        // Initialisation du carrousel
+       
         $('#slideshow-container').slick({
             autoplay: true,
             autoplaySpeed: 5000,
             arrows: false,
-            vertical: false, // Défilement horizontal
+            vertical: false, 
             pauseOnHover: false,
             pauseOnFocus: false,
-            speed: 1000, // Vitesse de défilement en millisecondes (1 seconde)
-            adaptiveHeight: true // Ajustement de la hauteur du conteneur en fonction du contenu
+            speed: 1000, 
+            adaptiveHeight: true
         });
     });
 

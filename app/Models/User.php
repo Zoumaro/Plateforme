@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -19,12 +19,12 @@ class User extends Authenticatable
      */
     
      protected $fillable = [
-        'nom', 
-        'prenoms', 
-        'email', 
-        'telephone', 
+        'name',
+        'first_name',
+        'email',
+        'telephone',
         'password',
-        'user_type',
+        'role_id',
     ];
 
     protected $hidden = [
@@ -36,4 +36,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
 }
