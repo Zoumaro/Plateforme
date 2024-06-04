@@ -35,11 +35,11 @@
             <img src="{{ asset('img/produit1.jpg') }}"
                     alt="img" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
-               
+
                 <p class="text-lg font-bold text-black truncate block capitalize">SOJA</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">3000 FCFA</p>
-                
+
                     <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -57,11 +57,11 @@
             <img src="{{ asset('img/produit2.jpg') }}"
                     alt="img" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
-               
+
                 <p class="text-lg font-bold text-black truncate block capitalize">Tomate</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">1500 FCFA</p>
-                   
+
                     <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -73,17 +73,17 @@
             </div>
         </a>
     </div>
-    
+
     <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
         <a href="#">
             <img src="{{ asset('img/produit3.jpg') }}"
                     alt="img" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
-                
+
                 <p class="text-lg font-bold text-black truncate block capitalize">OIGNON</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">2500 FCFA</p>
-                    
+
                     <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -95,17 +95,17 @@
             </div>
         </a>
     </div>
-   
+
     <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
         <a href="#">
             <img  src="{{ asset('img/produit5.jpg') }}"
                     alt="img" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
-                
+
                 <p class="text-lg font-bold text-black truncate block capitalize">MAÏS FRAI</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">1000 FCFA</p>
-                    
+
                     <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -117,17 +117,17 @@
             </div>
         </a>
     </div>
- 
+
     <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
         <a href="#">
             <img src="{{ asset('img/mil.jpg') }}"
                     alt="img" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
-            
+
                 <p class="text-lg font-bold text-black truncate block capitalize">Mil</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">5000 FCFA</p>
-                    
+
                     <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -139,7 +139,7 @@
             </div>
         </a>
     </div>
- 
+
 
 
 
@@ -148,11 +148,11 @@
             <img src="{{ asset('img/media.jpg') }}"
                     alt="img" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
-                
+
                 <p class="text-lg font-bold text-black truncate block capitalize">HARICOT</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">2800 FCFA</p>
-                   
+
                     <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -171,11 +171,11 @@
             <img src="{{ asset('img/maïs.jpg') }}"
                     alt="img" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
-               
+
                 <p class="text-lg font-bold text-black truncate block capitalize">MAÏS SEC</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">4000 FCFA</p>
-                
+
                     <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -194,11 +194,11 @@
             <img src="{{ asset('image/image6.jpg') }}"
                     alt="image" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
-                
+
                 <p class="text-lg font-bold text-black truncate block capitalize">BANANE</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">900 FCFA</p>
-                   
+
                     <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -217,11 +217,11 @@
             <img src="{{ asset('image/image5.jpg') }}"
                     alt="image" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
-                
+
                 <p class="text-lg font-bold text-black truncate block capitalize">CAROTE</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">1600 FCFA</p>
-                   
+
                     <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -240,11 +240,11 @@
             <img src="{{ asset('img/laitue.jpg') }}"
                     alt="img" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
-             
+
                 <p class="text-lg font-bold text-black truncate block capitalize">Laitue</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">700 FCFA</p>
-                  
+
                     <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -262,11 +262,11 @@
             <img src="{{ asset('img/igname-assawa.jpg') }}"
                     alt="img" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
-                
+
                 <p class="text-lg font-bold text-black truncate block capitalize">IGNAME</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">5000 FCFA</p>
-            
+
                     <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -285,11 +285,11 @@
             <img src="{{ asset('img/Haricot-vert.jpg') }}"
                     alt="img" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
-                
+
                 <p class="text-lg font-bold text-black truncate block capitalize">HARICOT VERT</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">1800 FCFA</p>
-               
+
                     <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -307,11 +307,11 @@
             <img src="{{ asset('img/piment.jpg') }}"
                     alt="img" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
-                
+
                 <p class="text-lg font-bold text-black truncate block capitalize">HARICOT VERT</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">1800 FCFA</p>
-               
+
                     <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -323,18 +323,18 @@
             </div>
         </a>
     </div>
-   
+
 
     <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
         <a href="#">
             <img src="{{ asset('img/manioc.jpg') }}"
                     alt="img" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
-                
+
                 <p class="text-lg font-bold text-black truncate block capitalize">MANIOC</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">800 FCFA</p>
-               
+
                     <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -352,11 +352,11 @@
             <img src="{{ asset('img/riz.jpg') }}"
                     alt="img" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
-                
+
                 <p class="text-lg font-bold text-black truncate block capitalize">RIZ</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">1000 FCFA</p>
-               
+
                     <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -375,11 +375,11 @@
             <img src="{{ asset('img/ara.jpg') }}"
                     alt="img" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
-                
+
                 <p class="text-lg font-bold text-black truncate block capitalize">ARACHIDE</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">1500 FCFA</p>
-               
+
                     <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -398,11 +398,11 @@
             <img src="{{ asset('img/araV.jpg') }}"
                     alt="img" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
-                
+
                 <p class="text-lg font-bold text-black truncate block capitalize">ARACHIDE FRAIS</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">1800 FCFA</p>
-               
+
                     <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
                             fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -418,7 +418,5 @@
 </section>
 
 
-<div class="text-center py-10 px-10">
-    <h2 class="font-bold text-2xl md:text-4xl mb-4">!</h2>
-</div>
+@include('footer')
 
