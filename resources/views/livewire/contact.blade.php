@@ -1,5 +1,5 @@
 
-@include('navbar')
+@include('livewire.navbar')
 
 
 <section class="mb-32">

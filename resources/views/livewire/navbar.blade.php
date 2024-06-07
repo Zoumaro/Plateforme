@@ -1,13 +1,18 @@
 
-
 <header class='font-[sans-serif] min-h-[60px] tracking-wide relative z-50'>
     <section class="bg-[#004d66] min-h-[40px] px-4 py-2 sm:px-10 flex items-center max-sm:flex-col">
-
       <span class="border-l h-3 mx-6 max-sm:hidden"></span>
       <div class="sm:ml-auto text-white">
-        <a href="/login" class="text-white text-sm mr-1">Se connecter</a>
-        /
-        <a href="/register" class="text-white text-sm ml-1">S'inscrire</a>
+        @auth
+        <a href="/producteur-dashboard" class="text-white text-sm mr-1">{{ Auth::user()->name }}</a>
+            /
+            <a href="/" class="text-white text-sm ml-1" wire:click="logout">Se déconnecter</a>
+
+        @else
+            <a href="/login" class="text-white text-sm mr-1">Se connecter</a>
+            /
+            <a href="/register" class="text-white text-sm ml-1">S'inscrire</a>
+        @endauth
       </div>
     </section>
 
