@@ -17,7 +17,7 @@ Route::get('/produit', Produit::class);
 Route::get('/register', Register::class);
 Route::get('/login', Login::class)->name('login');
 Route::get('/panier', Panier::class);
-Route::get('/producteur/dashboard', ProducteurDashboard::class);
+Route::get('/producteur-dashboard', ProducteurDashboard::class);
 
 
     

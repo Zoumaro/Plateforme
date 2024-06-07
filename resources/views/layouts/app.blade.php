@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html  lang="fr">
+<head class='font-[sans-serif] min-h-[60px] tracking-wide relative z-50'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>

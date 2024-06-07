@@ -1,6 +1,7 @@
 
 
-@include('navbar')
+@include('livewire.navbar')
+
 <div class="text-center p-10">
     <h1 class="font-bold text-4xl mb-4">Table des Produits</h1>
 </div>
@@ -15,7 +16,7 @@
          <img src="{{ asset('image/image4.jpg') }}"
                     alt="image" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
-                <p class="text-lg font-bold text-black truncate block capitalize">Patate</p>
+                <p class="text-lg font-bold text-black truncate block capitalize">PATATE</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">2000 FCFA kl</p>
                     <div class="ml-auto"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -58,7 +59,7 @@
                     alt="img" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
 
-                <p class="text-lg font-bold text-black truncate block capitalize">Tomate</p>
+                <p class="text-lg font-bold text-black truncate block capitalize">TOMATE</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">1500 FCFA</p>
 
@@ -102,7 +103,7 @@
                     alt="img" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
 
-                <p class="text-lg font-bold text-black truncate block capitalize">MAÏS FRAI</p>
+                <p class="text-lg font-bold text-black truncate block capitalize">MAÏS FRAIS</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">1000 FCFA</p>
 
@@ -241,7 +242,7 @@
                     alt="img" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
 
-                <p class="text-lg font-bold text-black truncate block capitalize">Laitue</p>
+                <p class="text-lg font-bold text-black truncate block capitalize">LAITUE</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">700 FCFA</p>
 
@@ -308,7 +309,7 @@
                     alt="img" class="h-80 w-72 object-cover rounded-t-xl" />
             <div class="px-4 py-3 w-72">
 
-                <p class="text-lg font-bold text-black truncate block capitalize">HARICOT VERT</p>
+                <p class="text-lg font-bold text-black truncate block capitalize">PIMENT ROUGE</p>
                 <div class="flex items-center">
                     <p class="text-lg font-semibold text-black cursor-auto my-3">1800 FCFA</p>
 
