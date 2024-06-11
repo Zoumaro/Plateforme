@@ -10,13 +10,14 @@ class Product extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nameProduct', 
-        'unitPrice', 
+        'name', 
+        'unit_price', 
         'picture', 
         'address', 
         'stock', 
         'user_id', 
-        'id_unit'
+        'unit_id',
+        'type_product_id'
     ];
 
     public function user()
@@ -26,7 +27,7 @@ class Product extends Model
 
     public function unit()
     {
-        return $this->belongsTo(Unit::class, 'id_unit');
+        return $this->belongsTo(Unit::class, 'unit_id');
     }
   
 }
