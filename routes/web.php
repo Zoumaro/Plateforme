@@ -20,4 +20,3 @@ Route::get('/panier', Panier::class);
 Route::get('/producteur-dashboard', ProducteurDashboard::class);
 
 
-    
