@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +21,7 @@
 
 </head>
 <body class="font-sans">
-    @include('navbar')
+@include('livewire.navbar')
 
     <div class="relative -mt-32 md:-mt-24 h-[750px] w-full overflow-hidden">
         <div id="slideshow-container" class="w-full h-full relative">
@@ -76,17 +76,17 @@
         <div class="flex justify-center items-center h-50">
             <img src="/image/image4.jpg" alt="Nom de l'image" class="w-full h-41 object-cover ">
         </div>
-        <div class="p-6 flex flex-col justify-center items-center"> <!-- Conteneur pour centrer le texte -->
+        <div class="p-6 flex flex-col justify-center items-center">
             <h3 class="text-lg font-semibold text-gray-800 mb-2">Patate</h3>
             <p class="text-gray-600">Prix : 2000 FCFA</p>
         </div>
     </div>
 
     <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-between transition duration-100 transform hover:scale-105">
-        <div class="flex justify-center items-center h-50"> <!-- Conteneur pour centrer l'image -->
-            <img src="/image/image.jpg" alt="Nom de l'image"  class="w-full h-50 object-cover"> <!-- Ajustement de la taille de l'image -->
+        <div class="flex justify-center items-center h-50">
+            <img src="/image/image.jpg" alt="Nom de l'image"  class="w-full h-50 object-cover">
         </div>
-        <div class="p-6 flex flex-col justify-center items-center"> <!-- Conteneur pour centrer le texte -->
+        <div class="p-6 flex flex-col justify-center items-center">
             <h3 class="text-lg font-semibold text-gray-800 mb-2">Carotte</h3>
             <p class="text-gray-600">Prix : 1600 FCFA</p>
         </div>
@@ -96,7 +96,7 @@
         <div class="flex justify-center items-center h-50">
             <img src="/image/image6.jpg" alt="Nom de l'image"  class="w-full h-41 object-cover">
         </div>
-        <div class="p-6 flex flex-col justify-center items-center"> <!-- Conteneur pour centrer le texte -->
+        <div class="p-6 flex flex-col justify-center items-center">
             <h3 class="text-lg font-semibold text-gray-800 mb-2">Banane</h3>
             <p class="text-gray-600">Prix : 900 FCFA</p>
         </div>

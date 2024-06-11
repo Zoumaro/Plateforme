@@ -1,74 +1,44 @@
 
-@include('navbar')
+@include('livewire.navbar')
 <div class="text-center p-10">
-    <h1 class="font-bold text-4xl mb-4">Tout les Produits</h1>
+    <h1 class="font-bold text-4xl mb-4">Produits</h1>
 </div>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2" defer></script>
 <style>
-    .progress-bar {
-        height: 5px;
-        background-color: #28a745; /* Couleur de la barre de progression */
-    }
+    .category-tab {
 
-    .product-card {
-        border: 1px solid #e2e8f0;
-        border-radius: 8px;
-        padding: 16px;
-        margin: 8px;
-        width: 200px;
+        margin-right: 10px;
+    }
+    .progress-bar {
+        transition: width 0.3s, left 0.3s;
+
     }
 </style>
-</head>
-<body>
-<div class="flex justify-around items-center bg-gray-100 py-4">
-    <div class="category-tab px-4 py-2 bg-blue-500 text-white rounded-lg cursor-pointer" onclick="filterItems('ALL')">ALL</div>
-    <div class="category-tab px-4 py-2 bg-green-500 text-white rounded-lg cursor-pointer" onclick="filterItems('VEGETABLES')">VEGETABLES</div>
-    <div class="category-tab px-4 py-2 bg-yellow-500 text-white rounded-lg cursor-pointer" onclick="filterItems('FRUITS')">FRUITS</div>
-    <div class="category-tab px-4 py-2 bg-red-500 text-white rounded-lg cursor-pointer" onclick="filterItems('BREAD')">BREAD</div>
+
+<div x-data="{ tab: 'TOUT LES PRODUITS', tabWidth: 0, tabLeft: 0 }" class="relative w-full max-w-lg mx-auto mt-10">
+<div class="flex justify-around text-gray-600">
+    <div class="category-tab cursor-pointer" :class="{ 'text-green-600': tab === 'TOUT LES PRODUITS' }" @click="tab = 'TOUT LES PRODUITS'; updateProgress($event)">TOUT LES PRODUITS</div>
+    <div class="category-tab cursor-pointer" :class="{ 'text-green-600': tab === 'CEREALES' }" @click="tab = 'CEREALES'; updateProgress($event)">CEREALES</div>
+    <div class="category-tab cursor-pointer" :class="{ 'text-green-600': tab === 'FRUITS' }" @click="tab = 'FRUITS'; updateProgress($event)">FRUITS</div>
+    <div class="category-tab cursor-pointer" :class="{ 'text-green-600': tab === 'LEGUMES' }" @click="tab = 'LEGUMES'; updateProgress($event)">LEGUMES</div>
+    <div class="category-tab cursor-pointer" :class="{ 'text-green-600': tab === 'LEGUMINEUSE' }" @click="tab = 'LEGUMINEUSE'; updateProgress($event)">LEGUMINEUSE</div>
+    <div class="category-tab cursor-pointer" :class="{ 'text-green-600': tab === 'OLEAGINEUX' }" @click="tab = 'OLEAGINEUX'; updateProgress($event)">OLEAGINEUX</div>
 </div>
-<div class="progress-bar" id="progressBar" style="width: 0;"></div> <!-- Barre de progression pour l'onglet actif -->
-<div id="filteredItems">
-    <div class="category-items ALL">
-        <div class="product-card">Produit 1</div>
-        <div class="product-card">Produit 2</div>
-        <div class="product-card">Produit 3</div>
-    </div>
-    <div class="category-items VEGETABLES hidden">
-        <div class="product-card">Légume 1</div>
-        <div class="product-card">Légume 2</div>
-        <div class="product-card">Légume 3</div>
-    </div>
-    <div class="category-items FRUITS hidden">
-        <div class="product-card">Fruit 1</div>
-        <div class="product-card">Fruit 2</div>
-        <div class="product-card">Fruit 3</div>
-    </div>
-    <div class="category-items BREAD hidden">
-        <div class="product-card">Pain 1</div>
-        <div class="product-card">Pain 2</div>
-        <div class="product-card">Pain 3</div>
-    </div>
+<div class="relative mt-2 h-1 bg-gray-300">
+    <div x-ref="progressBar" class="absolute h-1 bg-green-600 progress-bar"></div>
+</div>
 </div>
 
 <script>
-    function filterItems(category) {
-        // Mettre à jour la largeur de la barre de progression en fonction de la catégorie sélectionnée
-        const progressBar = document.getElementById('progressBar');
-        if (category === 'ALL') {
-            progressBar.style.width = '100%';
-        } else {
-            progressBar.style.width = '25%'; // Changer la largeur en fonction du nombre de catégories
-        }
+function updateProgress(event) {
+    const progressBar = document.querySelector('.progress-bar');
+    const tabWidth = event.target.offsetWidth;
+    const tabOffsetLeft = event.target.offsetLeft;
 
-        // Afficher les éléments filtrés en dessous de la barre de progression
-        const filteredItems = document.querySelectorAll('.category-items');
-        filteredItems.forEach(item => {
-            if (item.classList.contains(category)) {
-                item.classList.remove('hidden');
-            } else {
-                item.classList.add('hidden');
-            }
-        });
-    }
+    progressBar.style.width = `${tabWidth}px`;
+    progressBar.style.left = `${tabOffsetLeft}px`;
+}
 </script>
 <section id="Projects" class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
     <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl category-items VEGETABLES">
