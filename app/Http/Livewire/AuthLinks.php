@@ -12,7 +12,8 @@ class AuthLinks extends Component{
     public function mount()
     {
         $this->isLoggedIn = Auth::check();
-        $this->userName = $this->isLoggedIn ? Auth::user()->name : null;
+        $this->userName = $this->isLoggedIn ? 'tableau de bord' : null;
+
     }
 
     public function logout()
