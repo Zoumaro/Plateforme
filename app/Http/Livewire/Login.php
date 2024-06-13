@@ -33,7 +33,7 @@ class Login extends Component
             }
         }
 
-        $this->addError('email', trans('auth.failed'));
+        $this->addError('email', trans('Mot de passe ou Email incorrecte'));
     }
     public function render()
     {
