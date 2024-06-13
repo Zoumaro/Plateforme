@@ -9,6 +9,7 @@ use App\Http\Livewire\Register;
 use App\Http\Livewire\ShowWelcome;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\ProducteurDashboard;
+use App\Http\Livewire\ProductDetail;
 
 
 
@@ -20,5 +21,8 @@ Route::get('/login', Login::class)->name('login');
 Route::get('/producteur-dashboard', ProducteurDashboard::class);
 Route::get('/acheteur-dashboard', AcheteurDashboard::class);
 Route::get('/agro-entreprise-dashboard', AgroEntrepriseDashboard::class);
+Route::get('/product/{productId}', ProductDetail::class)->name('product.detail');
+
+
 
 
