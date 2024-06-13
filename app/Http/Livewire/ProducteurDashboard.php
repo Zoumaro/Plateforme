@@ -14,12 +14,12 @@ class ProducteurDashboard extends Component
     public function rules()
     {
         return [
-        'newProduit.name'=> 'required|min:3', 
-        'newProduit.unit_price' => 'required', 
-        'newProduit.picture' => 'nullable', 
-        'newProduit.address'=> 'required', 
-        'newProduit.stock'=> 'required', 
-        'newProduit.user_id'=> 'required', 
+        'newProduit.name'=> 'required|min:3',
+        'newProduit.unit_price' => 'required',
+        'newProduit.picture' => 'nullable',
+        'newProduit.address'=> 'required',
+        'newProduit.stock'=> 'required',
+        'newProduit.user_id'=> 'required',
         'newProduit.unit_id'=> 'required',
         'newProduit.type_product_id'=> 'required'
         ];

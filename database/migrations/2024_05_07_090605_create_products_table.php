@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string('unitPrice');
             $table->string('picture');
             $table->string('address');
-            $table->string('product_type');
             $table->string('stock');
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreignId('unit_id')->references('id')->on('units')->onDelete('cascade');

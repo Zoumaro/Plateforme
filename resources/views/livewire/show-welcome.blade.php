@@ -80,7 +80,7 @@
             <h3 class="text-lg font-semibold text-gray-800 mb-2">Patate</h3>
             <p class="text-gray-600">Prix : 2000 FCFA</p>
         </div>
-    </div>
+    </div> 
 
     <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col justify-between transition duration-100 transform hover:scale-105">
         <div class="flex justify-center items-center h-50">
