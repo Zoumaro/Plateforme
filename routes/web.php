@@ -14,6 +14,7 @@ use App\Http\Livewire\AgroEntrepriseDashboard;
 
 
 
+
 Route::get('/', ShowWelcome::class);
 Route::get('/contact', Contact::class);
 Route::get('/produit', Produit::class);
@@ -24,7 +25,5 @@ Route::get('/acheteur-dashboard', AcheteurDashboard::class);
 Route::get('/agro-entreprise-dashboard', AgroEntrepriseDashboard::class);
 Route::get('/product/{productId}', ProductDetail::class)->name('product.detail');
 Route::get('/profile', UserProfile::class)->name('profile');
-
-
 
 

@@ -154,4 +154,4 @@
     </div>
   </div>
 </section>
-@include('footer')
+@include('livewire.footer')
