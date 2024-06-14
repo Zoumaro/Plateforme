@@ -15,16 +15,12 @@
 
     }
 </style>
-
 <div x-data="{ tab: 'TOUT LES PRODUITS', tabWidth: 0, tabLeft: 0 }" class="relative w-full max-w-lg mx-auto mt-10">
-<div class="flex justify-around text-gray-600">
-    <div class="category-tab cursor-pointer" :class="{ 'text-green-600': tab === 'TOUT LES PRODUITS' }" @click="tab = 'TOUT LES PRODUITS'; updateProgress($event)">TOUT LES PRODUITS</div>
-    <div class="category-tab cursor-pointer" :class="{ 'text-green-600': tab === 'CEREALES' }" @click="tab = 'CEREALES'; updateProgress($event)">CEREALES</div>
-    <div class="category-tab cursor-pointer" :class="{ 'text-green-600': tab === 'FRUITS' }" @click="tab = 'FRUITS'; updateProgress($event)">FRUITS</div>
-    <div class="category-tab cursor-pointer" :class="{ 'text-green-600': tab === 'LEGUMES' }" @click="tab = 'LEGUMES'; updateProgress($event)">LEGUMES</div>
-    <div class="category-tab cursor-pointer" :class="{ 'text-green-600': tab === 'LEGUMINEUSE' }" @click="tab = 'LEGUMINEUSE'; updateProgress($event)">LEGUMINEUSE</div>
-    <div class="category-tab cursor-pointer" :class="{ 'text-green-600': tab === 'OLEAGINEUX' }" @click="tab = 'OLEAGINEUX'; updateProgress($event)">OLEAGINEUX</div>
-</div>
+    <div class="flex justify-around text-gray-600">
+        @foreach($productTypes as $type)
+            <div class="category-tab cursor-pointer" :class="{ 'text-green-600': tab === '{{ $type->name }}' }" @click="tab = '{{ $type->name }}'; updateProgress($event)">{{ $type->name }}</div>
+        @endforeach
+    </div>
 <div class="relative mt-2 h-1 bg-gray-300">
     <div x-ref="progressBar" class="absolute h-1 bg-green-600 progress-bar"></div>
 </div>

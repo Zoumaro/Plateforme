@@ -2,30 +2,22 @@
 
 namespace App\Http\Livewire;
 
-use Livewire\Component;
 use App\Models\Product;
+use Livewire\Component;
+use App\Models\ProductType;
 
 class Produit extends Component
 {
-    public $category = 'TOUT LES PRODUITS';
+    public $productTypes;
 
-    public function setCategory($category)
+    public function mount()
     {
-        $this->category = $category;
+        $this->productTypes = ProductType::all();
     }
 
-    public function getFilteredProductsProperty()
-    {
-        if ($this->category === 'TOUT LES PRODUITS') {
-            return Product::all();
-        }
-
-        return Product::whereHas('productType', function($query) {
-            $query->where('name', $this->category);
-        })->get();
-    }
+    
     public function render()
     {
-        return view('livewire.produit',["products"=>Product::all(),'products' => $this->filteredProducts,]);
+        return view('livewire.produit',["products"=>Product::all()]);
     }
 }
