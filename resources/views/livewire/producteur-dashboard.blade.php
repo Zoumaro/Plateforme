@@ -1,11 +1,12 @@
 <div>
     @include('livewire.navbar')
-    
-                        @if (session()->has('message'))
-                        <div class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-lg shadow-lg">
-                            {{ session('message') }}
-                        </div>
-                        @endif
+
+
+    @if (session()->has('message'))
+    <div class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-lg shadow-lg">
+        {{ session('message') }}
+    </div>
+    @endif
     <div class="flex h-screen bg-gray-100">
 
         <div class="hidden md:flex flex-col w-64 bg-gray-800 rounded-2xl">
@@ -27,20 +28,25 @@
                             </svg>
                             Home
                         </a>
-                        <a href="#" class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-400 hover:bg-opacity-25 rounded-2xl">
+                        <a href="{{ route('profile') }}" class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-400 hover:bg-opacity-25 rounded-2xl">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" style="margin-right: 8px">
                                 <path fill="currentColor" d="M12 4a5 5 0 1 1-5 5a5 5 0 0 1 5-5m0-2a7 7 0 1 0 7 7a7 7 0 0 0-7-7m10 28h-2v-5a5 5 0 0 0-5-5H9a5 5 0 0 0-5 5v5H2v-5a7 7 0 0 1 7-7h6a7 7 0 0 1 7 7zm0-26h10v2H22zm0 5h10v2H22zm0 5h7v2h-7z" />
                             </svg>
                             Profile
                         </a>
-                       
+                            
+
                         <a href="#" wire:click="create()" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-400 hover:bg-opacity-25 rounded-2xl">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="margin-right: 8px">
                                 <path fill="none" stroke="currentColor" stroke-width="2" d="M16 7h3v4h-3zm-7 8h11M9 11h4M9 7h4M6 18.5a2.5 2.5 0 1 1-5 0V7h5.025M6 18.5V3h17v15.5a2.5 2.5 0 0 1-2.5 2.5h-17" />
                             </svg>
                             Ajouter Produit
                         </a>
-
+                        @if (session()->has('message'))
+                            <div class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-lg shadow-lg">
+                                {{ session('message') }}
+                            </div>
+                            @endif
                         <div wire:ignore.self id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
                             <div class="relative p-4 w-full max-w-3xl max-h-full">
                                 <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -64,7 +70,7 @@
                                             </div>
                                             <div class="col-span-2 sm:col-span-1">
                                                 <label for="unit_price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Prix</label>
-                                                <input type="number" wire:model="newProduit.unit_price" id="unit_price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="$2999">
+                                                <input type="number" wire:model="newProduit.unit_price" id="unit_price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" <input type="number" wire:model="newProduit.unit_price" id="unit_price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Entrez le prix  FCFA"> ">
                                                 @error('newProduit.unit_price') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                                             </div>
                                             <div class="col-span-2 sm:col-span-1">
@@ -74,17 +80,20 @@
                                             </div>
                                             <div class="col-span-2 sm:col-span-1">
                                                 <label for="picture" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Image</label>
-                                                <input type="file" wire:model="picture" id="picture" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="picture_help">
+                                                <input type="file" wire:model="picture" id="picture" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400
+                                                 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" >
                                                 @error('picture') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                                             </div>
                                             <div class="col-span-2 sm:col-span-1">
                                                 <label for="stock" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Stock</label>
-                                                <input type="number" wire:model="newProduit.stock" id="stock" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Stock">
+                                                <input type="number" wire:model="newProduit.stock" id="stock" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 
+                                                block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Stock">
                                                 @error('newProduit.stock') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                                             </div>
                                             <div class="col-span-2 sm:col-span-1">
                                                 <label for="type_product_id" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Catégories</label>
-                                                <select wire:model="newProduit.product_type_id" id="type_product_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                                <select wire:model="newProduit.product_type_id" id="type_product_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 
+                                                dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                                                     <option value="" selected>Sélectionner catégorie</option>
                                                     @foreach($productTypes as $productType)
                                                     <option value="{{ $productType->id }}">{{ $productType->name }}</option>
@@ -124,22 +133,12 @@
                         </div>
 
 
-                        @if (session()->has('message'))
-                        <div class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-lg shadow-lg">
-                            {{ session('message') }}
-                        </div>
-                        @endif
-
-
+                        
                         <script>
                             window.addEventListener('close-modal', event => {
                                 document.querySelector('[data-modal-toggle="crud-modal"]').click();
                             });
                         </script>
-
-
-
-
 
                         <a href="#" class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-400 hover:bg-opacity-25 rounded-2xl">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" style="margin-right: 8px">
@@ -152,12 +151,25 @@
                             </svg>
                             Liste des Commandes
                         </a>
-
+                        <div>
+                        @if ($view == 'products')
+                        
+                        @elseif ($view == 'orders')
+                       
+                        @foreach ($orders as $order)
+                        
+                        @endforeach
+                        @endif
+                        </div>
                     </div>
                 </nav>
 
             </div>
         </div>
- 
+        <div class="flex h-screen bg-gray-100">
+            <div class="flex-1">
+                @livewire('products-list')
+            </div>
+        </div>
     </div>
 </div>

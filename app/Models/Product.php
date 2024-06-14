@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\ProductType;
 
 class Product extends Model
 {
@@ -30,8 +31,9 @@ class Product extends Model
     {
         return $this->belongsTo(Unit::class, 'unit_id');
     }
-    public function product_type()
+
+    public function productType()
     {
-        return $this->belongsTo(product_type::class,'product_type_id');
+        return $this->belongsTo(ProductType::class, 'product_type_id');
     }
 }

@@ -49,24 +49,20 @@
           </svg>
         </button>
 
-        <section >
+        <section>
     <span class="border-l h-3 mx-6 sm:hidden"></span>
     <div class="sm:ml-auto text-white pl-6">
       @auth
       <div x-data="{ open: false }" class="relative inline-block text-left">
         <div>
-          <button @click="open = !open" type="button" class="inline-flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 shadow-lg bg-white text-sm font-medium text-gray-700 hover:bg-gray-100 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out" id="menu-button" aria-expanded="true" aria-haspopup="true">
-            M
-            <svg class="-mr-1 ml-2 h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 111.414 1.414l-4 4a1 1 01-1.414 0l-4-4a1 1 010-1.414z" clip-rule="evenodd" />
-            </svg>
+          <button @click="open = !open" type="button" class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 shadow-lg bg-white hover:bg-gray-100 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out" id="menu-button" aria-expanded="true" aria-haspopup="true">
+            <span class="font-medium text-gray-700">M</span>
           </button>
-
         </div>
 
         <div x-show="open" @click.away="open = false" class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
           <div class="py-1" role="none">
-            <p class="block px-4 py-2 text-sm text-gray-700" role="menuitem">{{ Auth::user()->name }}</p>
+          <a href="/producteur-dashboard" class="block px-4 py-2 text-sm text-gray-700" role="menuitem">{{ Auth::user()->name }}</a>
             <p class="block px-4 py-2 text-sm text-gray-700" role="menuitem">{{ Auth::user()->email }}</p>
             <a href="/" wire:click.prevent="logout" class="block px-4 py-2 text-sm text-gray-700" role="menuitem">Déconnexion</a>
           </div>
@@ -79,6 +75,7 @@
       @endauth
     </div>
   </section>
+
 
       </div>
     </div>

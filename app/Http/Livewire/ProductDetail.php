@@ -13,7 +13,7 @@ class ProductDetail extends Component
     public function mount($productId)
     {
         $this->productId = $productId;
-        $this->product = Product::with(['user', 'unit', 'product_type'])->findOrFail($productId);
+        $this->product = Product::with(['user', 'unit', 'productType'])->findOrFail($productId);
        
     }
     public function render()

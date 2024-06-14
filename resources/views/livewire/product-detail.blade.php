@@ -2,7 +2,7 @@
 <div class="max-w-md mx-auto bg-white shadow-md rounded-lg overflow-hidden">
     <div class="p-4">
         <h1 class="text-2xl font-bold text-gray-800 mb-4">{{ $product->name }}</h1>
-        <img src="{{ asset($product->picture) }}" alt="image" class="w-24 h-auto mb-4">
+        <img src="{{ Storage::url($product->picture) }}" alt="image" class="w-24 h-auto mb-4">
         <table class="w-full text-left table-auto">
             <tbody>
                 <tr class="border-t border-gray-200">
@@ -35,7 +35,7 @@
                 </tr>
                 <tr class="border-t border-gray-200">
                     <th class="px-4 py-2 text-gray-600">Type de Produit</th>
-                    <td class="px-4 py-2">{{ $product->product_type->name }}</td>
+                    <td class="px-4 py-2">{{ $product->productType->name }}</td>
                 </tr>
             </tbody>
         </table>

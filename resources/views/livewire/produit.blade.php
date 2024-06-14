@@ -43,7 +43,7 @@ function updateProgress(event) {
 <section id="Projects" class="w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-y-20 gap-x-14 mt-10 mb-5">
     @foreach ($products as $product)
     <div class="w-72 bg-white shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl category-items VEGETABLES">
-        <img src="{{ $product->picture }}" alt="image" class="h-80 w-auto object-cover rounded-t-xl" />
+        <img src="{{ Storage::url($product->picture) }}" alt="image" class="h-80 w-auto object-cover rounded-t-xl" />
         <div class="px-4 py-3 w-72">
             <p class="text-lg font-bold text-black truncate block capitalize">{{$product->name}}</p>
             <div class="flex items-center">

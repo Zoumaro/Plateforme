@@ -3,12 +3,13 @@
 namespace App\Http\Livewire;
 
 use App\Models\Unit;
+use App\Models\Order;
 use App\Models\Product;
 use Livewire\Component;
 use App\Models\ProductType;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\Storage;
 class ProducteurDashboard extends Component
 {
     use WithFileUploads;
@@ -17,8 +18,11 @@ class ProducteurDashboard extends Component
     public $userEmail;
     public $newProduit;
     public $picture;
+     public $pictureUrl;
     public $units;
     public $productTypes;
+    public $view = 'products';
+    public $orders;
 
     protected $rules = [
         'newProduit.name' => 'required|min:3',
@@ -46,11 +50,23 @@ class ProducteurDashboard extends Component
         $this->units = Unit::all();
         $this->productTypes = ProductType::all();
     }
+    public function updatedPicture()
+    {
+        if ($this->picture) {
+            $path = $this->picture->store('pictures/temp', 'public');
+            $this->pictureUrl = Storage::url($path);
+        }
+    }
 
     public function logout()
     {
         Auth::logout();
         return redirect('/');
+    }
+    public function showOrders()
+    {
+        $this->view = 'orders';
+        $this->orders = Order::where('user_id', Auth::id())->get(); 
     }
 
     public function create()
@@ -85,6 +101,7 @@ class ProducteurDashboard extends Component
         return view('livewire.producteur-dashboard', [
             'units' => $this->units,
             'productTypes' => $this->productTypes,
+            'orders' => $this->orders ?? [],
         ]);
     }
 }
