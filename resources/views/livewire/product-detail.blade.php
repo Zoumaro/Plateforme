@@ -37,8 +37,29 @@
                     <th class="px-4 py-2 text-gray-600">Type de Produit</th>
                     <td class="px-4 py-2">{{ $product->product_type->name }}</td>
                 </tr>
+                <tr class="border-t border-gray-200">
+                    <td colspan="2" class="px-4 py-2 text-center">
+                        <kkiapay-widget amount="{{ $product->unitPrice }}"
+                            key="ecb931e02a6811ef989b714ab6952562"
+                            position="center"
+                            sandbox="true"
+                            data=""
+                            callback="javascript:transactionCallback()">
+                        </kkiapay-widget>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
 </div>
-@include('footer')
+@include('livewire.footer')
+
+<script>
+    function transactionCallback() {
+        Livewire.emit('transactionCompleted');
+    }
+
+    Livewire.on('redirectAfterTransaction', (url) => {
+        window.location.href = url;
+    });
+</script>

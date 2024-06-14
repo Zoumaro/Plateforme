@@ -11,6 +11,7 @@ use App\Http\Livewire\ProductDetail;
 
 
 
+
 Route::get('/', ShowWelcome::class);
 Route::get('/contact', Contact::class);
 Route::get('/produit', Produit::class);
@@ -18,7 +19,5 @@ Route::get('/register', Register::class);
 Route::get('/login', Login::class)->name('login');
 Route::get('/producteur-dashboard', ProducteurDashboard::class);
 Route::get('/product/{productId}', ProductDetail::class)->name('product.detail');
-
-
 
 

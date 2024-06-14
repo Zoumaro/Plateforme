@@ -10,11 +10,21 @@ class ProductDetail extends Component
     public $productId;
     public $product;
 
+    protected $listeners = ['transactionCompleted'];
+
+    public function transactionCompleted()
+    {
+
+
+        $url = route('/produit');
+        $this->emit('redirectAfterTransaction', $url);
+    }
+
     public function mount($productId)
     {
         $this->productId = $productId;
         $this->product = Product::with(['user', 'unit', 'product_type'])->findOrFail($productId);
-       
+
     }
     public function render()
     {
