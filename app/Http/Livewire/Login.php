@@ -29,7 +29,7 @@ class Login extends Component
                 case 3:
                     return redirect()->intended('/agro-entreprise-dashboard');
                 default:
-                    return redirect()->intended('/home');
+                    return redirect()->intended('/');
             }
         }
 

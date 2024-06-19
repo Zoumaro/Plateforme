@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\Product;
 use Livewire\Component;
 use App\Models\ProductType;
+use Illuminate\Support\Facades\Auth;
 
 class Produit extends Component
 {
@@ -14,7 +15,11 @@ class Produit extends Component
     {
         $this->productTypes = ProductType::all();
     }
-
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('/');
+    }
     
     public function render()
     {
