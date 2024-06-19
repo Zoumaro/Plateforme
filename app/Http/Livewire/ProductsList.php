@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Product; 
+use Illuminate\Support\Facades\Auth;
 
 class ProductsList extends Component
 {
@@ -13,7 +14,11 @@ class ProductsList extends Component
     {
         $this->products = Product::where('user_id', auth()->user()->id)->get();
     }
-    
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('/');
+    }
 
     public function render()
     {

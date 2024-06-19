@@ -49,12 +49,12 @@
                             @endif
                         <div wire:ignore.self id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
                             <div class="relative p-4 w-full max-w-3xl max-h-full">
-                                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                                    <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                                <div class="relative bg-white rounded-lg shadow">
+                                    <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t" >
+                                        <h3 class="text-lg font-semibold text-gray-900">
                                             Ajouter des Produits
                                         </h3>
-                                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="crud-modal">
+                                        <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center" data-modal-toggle="crud-modal">
                                             <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
                                             </svg>
@@ -64,36 +64,35 @@
                                     <form class="p-4 md:p-5" wire:submit.prevent="save">
                                         <div class="grid gap-4 mb-4 grid-cols-1 sm:grid-cols-2">
                                             <div class="col-span-2">
-                                                <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nom</label>
-                                                <input type="text" wire:model="newProduit.name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Type product name">
+                                                <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Nom</label>
+                                                <input type="text" wire:model="newProduit.name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5   " placeholder="Type product name">
                                                 @error('newProduit.name') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                                             </div>
                                             <div class="col-span-2 sm:col-span-1">
-                                                <label for="unit_price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Prix</label>
-                                                <input type="number" wire:model="newProduit.unit_price" id="unit_price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" <input type="number" wire:model="newProduit.unit_price" id="unit_price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Entrez le prix  FCFA"> 
+                                                <label for="unit_price" class="block mb-2 text-sm font-medium text-gray-900 ">Prix</label>
+                                                <input type="number" wire:model="newProduit.unit_price" id="unit_price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" input type="number" wire:model="newProduit.unit_price" id="unit_price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Entrez le prix  FCFA">
                                                 @error('newProduit.unit_price') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                                             </div>
                                             <div class="col-span-2 sm:col-span-1">
-                                                <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Adresse</label>
-                                                <input type="text" wire:model="newProduit.address" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Adresse">
+                                                <label for="address" class="block mb-2 text-sm font-medium text-gray-900 ">Adresse</label>
+                                                <input type="text" wire:model="newProduit.address" id="address" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 " placeholder="Adresse">
                                                 @error('newProduit.address') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                                             </div>
                                             <div class="col-span-2 sm:col-span-1">
-                                                <label for="picture" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Image</label>
-                                                <input type="file" wire:model="picture" id="picture" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400
-                                                 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" >
+                                                <label for="picture" class="block mb-2 text-sm font-medium text-gray-900">Image</label>
+                                                <input type="file" wire:model="picture" id="picture" class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50
+                                                 focus:outline-none" >
                                                 @error('picture') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                                             </div>
                                             <div class="col-span-2 sm:col-span-1">
-                                                <label for="stock" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Stock</label>
+                                                <label for="stock" class="block mb-2 text-sm font-medium text-gray-900 ">Stock</label>
                                                 <input type="number" wire:model="newProduit.stock" id="stock" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600
-                                                block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Stock">
+                                                block w-full p-2.5 " placeholder="Stock">
                                                 @error('newProduit.stock') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                                             </div>
                                             <div class="col-span-2 sm:col-span-1">
-                                                <label for="type_product_id" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Catégories</label>
-                                                <select wire:model="newProduit.product_type_id" id="type_product_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5
-                                                dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                                <label for="type_product_id" class="block mb-2 text-sm font-medium text-gray-900 ">Catégories</label>
+                                                <select wire:model="newProduit.product_type_id" id="type_product_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 ">
                                                     <option value="" selected>Sélectionner catégorie</option>
                                                     @foreach($productTypes as $productType)
                                                     <option value="{{ $productType->id }}">{{ $productType->name }}</option>
@@ -102,8 +101,8 @@
                                                 @error('newProduit.product_type_id') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                                             </div>
                                             <div class="col-span-2 sm:col-span-1">
-                                                <label for="unit_id" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Unité</label>
-                                                <select wire:model="newProduit.unit_id" id="unit_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                                <label for="unit_id" class="block mb-2 text-sm font-medium text-gray-900 ">Unité</label>
+                                                <select wire:model="newProduit.unit_id" id="unit_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5  ">
                                                     <option value="" selected>Sélectionner unité</option>
                                                     @foreach($units as $unit)
                                                     <option value="{{ $unit->id }}">{{ $unit->name }}</option>
@@ -112,16 +111,16 @@
                                                 @error('newProduit.unit_id') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                                             </div>
                                             <div class="col-span-2 sm:col-span-1">
-                                                <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Utilisateur connecté</label>
-                                                <p class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:text-white">{{ $userName }}</p>
+                                                <label class="block mb-2 text-sm font-medium text-gray-900 ">Utilisateur connecté</label>
+                                                <p class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5  ">{{ $userName }}</p>
                                             </div>
                                             <div class="col-span-2">
-                                                <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
-                                                <textarea wire:model="newProduit.description" id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write product description here"></textarea>
+                                                <label for="description" class="block mb-2 text-sm font-medium text-gray-900 ">Description</label>
+                                                <textarea wire:model="newProduit.description" id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500   " placeholder="Write product description here"></textarea>
                                                 @error('newProduit.description') <span class="text-red-500 text-sm">{{ $message }}</span> @enderror
                                             </div>
                                         </div>
-                                        <button type="submit" class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                        <button type="submit" class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
                                             <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path>
                                             </svg>
@@ -140,7 +139,7 @@
                             });
                         </script>
 
-                        <a href="#" class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-400 hover:bg-opacity-25 rounded-2xl">
+                        <a href="{{ route('orders') }}" class="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-400 hover:bg-opacity-25 rounded-2xl">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32" style="margin-right: 8px">
                                 <path fill="currentColor" d="M21.053 20.8c-1.132-.453-1.584-1.698-1.584-1.698s-.51.282-.51-.51s.51.51 1.02-2.548c0 0 1.413-.397 1.13-3.68h-.34s.85-3.51 0-4.7c-.85-1.188-1.188-1.98-3.057-2.547s-1.188-.454-2.547-.396c-1.36.058-2.492.793-2.492 1.19c0 0-.85.056-1.188.396c-.34.34-.906
                         1.924-.906 2.32s.283 3.06.566 3.625l-.337.114c-.284 3.283 1.13 3.68 1.13 3.68c.51 3.058 1.02 1.756 1.02 2.548s-.51.51-.51.51s-.452 1.245-1.584 1.698c-1.132.452-7.416 2.886-7.927 3.396c-.512.51-.454 2.888-.454 2.888H29.43s.06-2.377-.452-2.888c-.51-.51-6.795-2.944-7.927-3.396zm-12.47-.172c-.1-.18-.148-.31-.148-.31s-.432.24-.432-.432s.432.432.864-2.16c0 0

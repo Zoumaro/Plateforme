@@ -51,6 +51,7 @@
                 </svg>
             </button>
 
+
             <section>
                 <span class="border-l h-3 mx-6 sm:hidden"></span>
                 <div class="sm:ml-auto text-white pl-6">
@@ -60,7 +61,7 @@
                                 <button @click="open = !open" type="button"
                                     class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-300 shadow-lg bg-white hover:bg-gray-100 hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out"
                                     id="menu-button" aria-expanded="true" aria-haspopup="true">
-                                    <span class="font-medium text-gray-700">M</span>
+                                    <span class="font-medium text-gray-700">{{ Auth::user()->name[0] }}</span>
                                 </button>
                             </div>
 
@@ -68,26 +69,40 @@
                                 class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
                                 role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                                 <div class="py-1" role="none">
-                                    <a href="/producteur-dashboard" class="block px-4 py-2 text-sm text-gray-700"
-                                        role="menuitem">{{ Auth::user()->name }}</a>
+                                    @if (Auth::user()->role->name == 'Producteur')
+                                        <a href="{{ route('producteur-dashboard') }}"
+                                            class="block px-4 py-2 text-sm text-gray-700"
+                                            role="menuitem">{{ Auth::user()->name }}</a>
+                                    @elseif (Auth::user()->role->name == 'Acheteur')
+                                        <a href="{{ route('acheteur-dashboard') }}"
+                                            class="block px-4 py-2 text-sm text-gray-700"
+                                            role="menuitem">{{ Auth::user()->name }}</a>
+                                    @elseif (Auth::user()->role->name == 'Agro-Entreprise')
+                                        <a href="{{ route('agro-entreprise-dashboard') }}"
+                                            class="block px-4 py-2 text-sm text-gray-700"
+                                            role="menuitem">{{ Auth::user()->name }}</a>
+                                    @endif
                                     <p class="block px-4 py-2 text-sm text-gray-700" role="menuitem">
-                                        {{ Auth::user()->email }}
-                                    </p>
+                                        {{ Auth::user()->email }}</p>
                                     <a href="/" wire:click.prevent="logout"
                                         class="block px-4 py-2 text-sm text-gray-700" role="menuitem">Déconnexion</a>
                                 </div>
                             </div>
                         </div>
                     @else
-                        <a href="/login" class="text-white text-sm mr-1">Se connecter</a>
-                        /
-                        <a href="/register" class="text-white text-sm ml-1">S'inscrire</a>
+                        <div>
+                            <a href="/login" class="text-white text-sm mr-1">Se Connester</a>
+                            /
+                            <a href="/register" class="text-white text-sm">S'inscrire</a>
+                        </div>
                     @endauth
                 </div>
             </section>
 
 
         </div>
+
+
 
 
 

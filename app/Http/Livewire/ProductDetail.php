@@ -2,8 +2,9 @@
 
 namespace App\Http\Livewire;
 
-use Livewire\Component;
 use App\Models\Product;
+use Livewire\Component;
+use Illuminate\Support\Facades\Auth;
 
 class ProductDetail extends Component
 {
@@ -16,6 +17,13 @@ class ProductDetail extends Component
         $this->product = Product::with(['user', 'unit', 'productType'])->findOrFail($productId);
 
     }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect('/');
+    }
+    
     public function render()
     {
         return view('livewire.product-detail', ['product' => $this->product]);

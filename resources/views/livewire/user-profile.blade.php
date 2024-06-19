@@ -1,35 +1,38 @@
-
 <div>
     @include('livewire.navbar')
-    <div class="container mx-auto p-6">
-      
-        <div class="bg-white shadow-lg rounded-lg p-6 mb-6">
-            <h2 class="text-2xl font-bold mb-4">Informations générales</h2>
-                <div class="flex items-center">
-                    <span class="font-bold w-1/3">Nom :</span>
-                    <div class="font-bold text-xl mb-2">{{ $user->name }}</div>
-                    <div class="font-bold text-xl mb-2">{{ $user->first_name }}</div>
-                   
-                </div>
-               
+    <div class="flex justify-center items-center min-h-screen bg-gray-100">
+        <div class="container mx-auto p-6">
+            <div class="bg-white shadow-lg rounded-lg p-6 mb-6">
+                <h2 class="text-2xl font-bold mb-4">Informations générales</h2>
+                <table class="min-w-full bg-white border border-gray-300 rounded-lg">
+                    <tbody>
+                        <tr class="bg-gray-100 border-b">
+                            <td class="font-bold p-4 border-r border-gray-300">Nom</td>
+                            <td class="text-xl p-4">{{ $user->name }}</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="font-bold p-4 border-r border-gray-300">Prénom</td>
+                            <td class="text-xl p-4">{{ $user->first_name }}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </div>
 
-    
-        <div class="bg-white shadow-lg rounded-lg p-6">
-            <h2 class="text-2xl font-bold mb-4">Coordonnées</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="flex items-center">
-                    <span class="font-bold w-1/3">Adresses e-mail :</span>
-                    <p class="text-gray-700 text-base">{{ $user->email }}</p>
-                </div>
-               
-                <div class="flex items-center">
-                    <span class="font-bold w-1/3">Téléphone :</span>
-                    <p>Téléphone : {{ $user->telephone }}</p>
-                </div>
+            <div class="bg-white shadow-lg rounded-lg p-6">
+                <h2 class="text-2xl font-bold mb-4">Coordonnées</h2>
+                <table class="min-w-full bg-white border border-gray-300 rounded-lg">
+                    <tbody>
+                        <tr class="bg-gray-100 border-b">
+                            <td class="font-bold p-4 border-r border-gray-300">Adresse e-mail</td>
+                            <td class="text-gray-700 text-base p-4">{{ $user->email }}</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="font-bold p-4 border-r border-gray-300">Téléphone</td>
+                            <td class="text-gray-700 text-base p-4">{{ $user->telephone }}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-
-    </div>
+</div>
