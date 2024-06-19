@@ -2,7 +2,13 @@
 <div class="max-w-md mx-auto bg-white shadow-md rounded-lg overflow-hidden">
     <div class="p-4">
         <h1 class="text-2xl font-bold text-gray-800 mb-4">{{ $product->name }}</h1>
-        <img src="{{ Storage::url($product->picture) }}" alt="image" class="w-24 h-auto mb-4">
+
+        @if (Str::startsWith($product->picture, '/image'))
+            <img src="{{ asset($product->picture) }}" alt="image" class="w-24 h-auto mb-4">
+        @else
+            <img src="{{ Storage::url($product->picture) }}" alt="image" class="w-24 h-auto mb-4">
+        @endif
+
         <table class="w-full text-left table-auto">
             <tbody>
                 <tr class="border-t border-gray-200">
@@ -15,7 +21,7 @@
                 </tr>
                 <tr class="border-t border-gray-200">
                     <th class="px-4 py-2 text-gray-600">Prix Unitaire</th>
-                    <td class="px-4 py-2">${{ number_format($product->unitPrice, 2) }}</td>
+                    <td class="px-4 py-2">{{ number_format($product->unit_price, 2) }} FCFA</td>
                 </tr>
                 <tr class="border-t border-gray-200">
                     <th class="px-4 py-2 text-gray-600">Adresse</th>
@@ -39,12 +45,13 @@
                 </tr>
                 <tr class="border-t border-gray-200">
                     <td colspan="2" class="px-4 py-2 text-center">
-                        <kkiapay-widget amount="{{ $product->unitPrice }}"
+                        <kkiapay-widget amount="{{ $product->unit_price }}"
                             key="ecb931e02a6811ef989b714ab6952562"
                             position="center"
                             sandbox="true"
                             data=""
-                            callback="javascript:transactionCallback()">
+                            callback="{{ url('/produit') }}"
+                            id="paymentWidget">
                         </kkiapay-widget>
                     </td>
                 </tr>
@@ -55,11 +62,10 @@
 @include('livewire.footer')
 
 <script>
-    function transactionCallback() {
-        Livewire.emit('transactionCompleted');
-    }
-
-    Livewire.on('redirectAfterTransaction', (url) => {
-        window.location.href = url;
+    document.getElementById('paymentWidget').addEventListener('click', function(event) {
+        @if(!auth()->check())
+            event.preventDefault();
+            window.location.href = "{{ route('login') }}?message=Veuillez vous connecter pour continuer le paiement.";
+        @endif
     });
 </script>

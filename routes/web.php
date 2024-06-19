@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\AcheteurDashboard;
 use App\Http\Livewire\ProducteurDashboard;
 use App\Http\Livewire\AgroEntrepriseDashboard;
+use App\Http\Livewire\ResearchResult;
+use App\Http\Livewire\SearchProducers;
 
 
 
@@ -25,5 +27,7 @@ Route::get('/acheteur-dashboard', AcheteurDashboard::class);
 Route::get('/agro-entreprise-dashboard', AgroEntrepriseDashboard::class);
 Route::get('/product/{productId}', ProductDetail::class)->name('product.detail');
 Route::get('/profile', UserProfile::class)->name('profile');
+Route::get('/recherche-producteurs', SearchProducers::class);
+Route::get('/research-result/{query}', ResearchResult::class)->name('reseach.result');
 
 

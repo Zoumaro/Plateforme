@@ -17,7 +17,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    
+
      protected $fillable = [
         'name',
         'first_name',
@@ -25,6 +25,10 @@ class User extends Authenticatable
         'telephone',
         'password',
         'role_id',
+        'department_id',
+        'municipality_id',
+        'district_id',
+        'locality_id',
     ];
 
     protected $hidden = [
@@ -41,4 +45,23 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Role::class);
     }
+
+    public function department()
+	{
+		return $this->belongsTo(Department::class, 'department_id');
+	}
+    public function municipality()
+	{
+		return $this->belongsTo(Municipality::class, 'municipality_id');
+	}
+
+    public function district()
+	{
+		return $this->belongsTo(District::class, 'district_id');
+	}
+    public function locality()
+	{
+		return $this->belongsTo(locality::class, 'locality_id');
+	}
+
 }

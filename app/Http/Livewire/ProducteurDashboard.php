@@ -66,7 +66,7 @@ class ProducteurDashboard extends Component
     public function showOrders()
     {
         $this->view = 'orders';
-        $this->orders = Order::where('user_id', Auth::id())->get(); 
+        $this->orders = Order::where('user_id', Auth::id())->get();
     }
 
     public function create()
@@ -83,14 +83,14 @@ class ProducteurDashboard extends Component
             $this->newProduit->picture = $this->picture->store('pictures', 'public');
         }
 
-        
+
         $this->newProduit->user_id = Auth::id();
         $this->newProduit->save();
 
         $this->newProduit = new Product();
         $this->picture = null;
 
-       
+
         session()->flash('message', 'Produit ajouté avec succès.');
 
         $this->dispatchBrowserEvent('close-modal');
