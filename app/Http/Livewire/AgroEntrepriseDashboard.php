@@ -21,9 +21,7 @@ class AgroEntrepriseDashboard extends Component
         if (Auth::check()) {
             if (Auth::user()->company) {
                 $this->loadAdvertisements();
-            } else {
-                session()->flash('message', 'Vous devez d\'abord enregistrer votre entreprise.');
-            }
+            } 
         } else {
             return redirect()->route('login');
         }

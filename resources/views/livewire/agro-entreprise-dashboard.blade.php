@@ -34,11 +34,7 @@
                             </svg>
                             Profile
                         </a>
-                        @if (session()->has('message'))
-                        <div class="bg-green-500 text-white p-4 rounded-lg shadow-lg">
-                            {{ session('message') }}
-                        </div>
-                        @endif
+                       
 
                         @if (!Auth::user()->company)
                         <div class="bg-yellow-500 text-white p-4 rounded-lg shadow-lg">
